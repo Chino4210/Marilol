@@ -110,7 +110,7 @@ scene("menu", () => {
 
 scene("game", ({ level, score }) => {
     layers(['bg', 'obj', 'ui'], 'obj')
-
+//Game Map 
     const maps = [
         [
         'b      bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb',
@@ -219,7 +219,7 @@ scene("game", ({ level, score }) => {
     ])
 
     add([text('level ' + parseInt(level + 1)), pos(40,6)])
-
+//when eat mushroom logic
     function big() {
         let timer = 0
         let isBig = false
@@ -250,7 +250,7 @@ scene("game", ({ level, score }) => {
             }
         }
     }
-
+//player logic
     const player = add([
         sprite('mario'), solid(),
         pos(30, 0),
@@ -323,6 +323,7 @@ scene("game", ({ level, score }) => {
         })
     })
 
+    //key bind
 
     keyDown('left', () => {
         player.move(-MOVE_SPEED, 0)
