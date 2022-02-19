@@ -425,7 +425,7 @@ scene('lose',({ score }) => {
 
 scene('Clear',() => {
     add([
-        text("Game Over!"),
+        text("Game Clear!"),
         origin('center'),
         pos(475, 80),
         scale(2)
